@@ -142,9 +142,6 @@ func (helper *IPHelper) getIPFromInterface() (string, error) {
 			continue
 		}
 
-		if ip.IsPrivate() {
-			continue
-		}
 
 		if isIPv4(ip.String()) {
 			if strings.ToUpper(helper.configuration.IPType) != utils.IPV4 {
